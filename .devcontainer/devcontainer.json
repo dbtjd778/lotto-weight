@@ -1,0 +1,10 @@
+{
+  "name": "lotto-weight",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+  "postCreateCommand": "npm install",
+  "postAttachCommand": "npm run dev",
+  "forwardPorts": [5180],
+  "portsAttributes": {
+    "5180": { "label": "게임", "onAutoForward": "openPreview" }
+  }
+}
