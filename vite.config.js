@@ -8,4 +8,6 @@ export default defineConfig(({ command }) => ({
   base: command === 'build' ? '/lotto-weight/' : '/',
   plugins: [react(), tailwindcss()],
   server: { port: 5180, strictPort: false },
+  // 3D 모드 청크(three.js 포함)는 고를 때만 따로 받는다
+  build: { chunkSizeWarningLimit: 700 },
 }))

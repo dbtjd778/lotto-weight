@@ -1,4 +1,4 @@
-import { useReducer, useEffect, useRef, useMemo } from 'react'
+import { useReducer, useEffect, useRef, useMemo, useState, lazy, Suspense } from 'react'
 import { gameReducer, initialState } from './engine/gameReducer'
 import { music, moodForState } from './engine/music'
 import StatHud from './components/StatHud'
@@ -6,11 +6,15 @@ import EventCard from './components/EventCard'
 import ResultCard from './components/ResultCard'
 import { TitleScreen, EndingScreen } from './components/Screens'
 import { ItemStrip } from './components/Avatar'
-import MusicToggle, { useMusic } from './components/MusicToggle'
+import { useMusic } from './components/MusicToggle'
+// three.js 가 무거우니 3D 모드를 고를 때만 불러온다
+const Game3D = lazy(() => import('./components/Game3D'))
 
 export default function App() {
   const [state, dispatch] = useReducer(gameReducer, initialState)
   const { muted, setMuted } = useMusic()
+  // '3d' = 걸어 다니며 플레이, 'text' = 기존 카드 방식
+  const [mode, setMode] = useState('3d')
   const topRef = useRef(null)
 
   const mood = useMemo(
@@ -42,8 +46,9 @@ export default function App() {
     topRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
   }, [state.current?.id, state.screen])
 
-  // 숫자 키로 선택지 고르기 / 스페이스로 진행
+  // 숫자 키로 선택지 고르기 / 스페이스로 진행 (3D 모드는 Game3D가 직접 처리)
   useEffect(() => {
+    if (mode !== 'text') return
     const onKey = (e) => {
       if (state.screen === 'event' && /^[1-9]$/.test(e.key)) {
         const i = Number(e.key) - 1
@@ -56,10 +61,11 @@ export default function App() {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [state.screen, state.current])
+  }, [state.screen, state.current, mode])
 
   // 오디오는 반드시 사용자 제스처 안에서 시작해야 한다
-  const handleStart = () => {
+  const handleStart = (m) => {
+    setMode(m)
     music.start('tense')
     dispatch({ type: 'START' })
   }
@@ -83,6 +89,20 @@ export default function App() {
         mood={mood}
         onToggleMusic={() => setMuted((m) => !m)}
       />
+    )
+  }
+
+  if (mode === '3d') {
+    return (
+      <Suspense fallback={<div className="fixed inset-0 bg-black" />}>
+        <Game3D
+          state={state}
+          dispatch={dispatch}
+          muted={muted}
+          mood={mood}
+          onToggleMusic={() => setMuted((m) => !m)}
+        />
+      </Suspense>
     )
   }
 

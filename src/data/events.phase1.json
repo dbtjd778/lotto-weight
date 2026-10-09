@@ -40,6 +40,7 @@
   },
   {
     "id": "p1_03_sleep",
+    "days": 1,
     "phase": 1,
     "chapter": "1교시 · 주말의 숨바꼭질",
     "speaker": "system",
@@ -80,6 +81,7 @@
   },
   {
     "id": "p1_06_lock",
+    "days": 1,
     "phase": 1,
     "chapter": "1교시 · 주말의 숨바꼭질",
     "speaker": "system",

@@ -83,8 +83,8 @@
     "title": "상현이의 코인",
     "description": "야 이거 지금 안 타면 진짜 후회한다. 나 이번 달에만 40% 먹었어.\n\n차트 스크린샷이 온다. 초록색이다. 눈이 아프게 초록색이다.",
     "options": [
-      { "text": "2억 넣는다", "effect": { "balance": -200000000, "mental": 18, "suspicion": 10 }, "flags": ["coin_200"], "delayed": { "afterDays": 30, "balance": -84000000, "mental": 20, "text": "코인이 42% 빠졌다. 8,400만 원이 증발했다. 상현이는 존버하면 온다고 했다." }, "result": "매수 버튼을 누르고 3분 만에 차트를 새로고침했다. 그날부터 하루에 40번씩 본다." },
-      { "text": "3천만 원. 잃어도 되는 만큼만", "effect": { "balance": -30000000, "mental": 6, "suspicion": 3 }, "flags": ["coin_30"], "delayed": { "afterDays": 30, "balance": -12600000, "mental": 6, "text": "코인 42% 하락. 1,260만 원 손실. 다행히 이 정도는 웃을 수 있다." }, "result": "에이 쫄보야. 쫄보 소리를 들었지만 잠은 잤다." },
+      { "text": "2억 넣는다", "effect": { "balance": -200000000, "mental": 18, "suspicion": 10 }, "flags": ["coin_200"], "delayed": { "afterDays": 30, "mental": 20, "text": "코인이 42% 빠졌다. 2억이 1억 1,600만 원이 됐다. 상현이는 존버하면 온다고 했다." }, "result": "매수 버튼을 누르고 3분 만에 차트를 새로고침했다. 그날부터 하루에 40번씩 본다." },
+      { "text": "3천만 원. 잃어도 되는 만큼만", "effect": { "balance": -30000000, "mental": 6, "suspicion": 3 }, "flags": ["coin_30"], "delayed": { "afterDays": 30, "balance": 17400000, "mental": 6, "text": "코인 42% 하락. 정리하니 1,740만 원이 돌아왔다. 1,260만 원짜리 수업료. 이 정도는 웃을 수 있다." }, "result": "에이 쫄보야. 쫄보 소리를 들었지만 잠은 잤다." },
       { "text": "난 됐다", "effect": { "mental": 4, "suspicion": -2 }, "flags": ["refused_coin"], "result": "한 달 뒤 상현이가 반토막 났다고 연락 왔다. 그때 안 탄 게 다행이었다." }
     ]
   },

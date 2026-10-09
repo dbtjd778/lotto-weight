@@ -1,4 +1,4 @@
-import { ALL_EVENTS } from '../data'
+import { ALL_EVENTS, epilogueLines } from '../data'
 import { koreanMoney } from './AnimatedNumber'
 import { ItemStrip } from './Avatar'
 import MusicToggle from './MusicToggle'
@@ -45,10 +45,17 @@ export function TitleScreen({ onStart, muted, onToggleMusic }) {
 
         <div className="mt-8 flex flex-wrap items-center gap-3">
           <button
-            onClick={onStart}
+            onClick={() => onStart('3d')}
             className="w-full rounded-xl bg-amber-500 px-6 py-4 text-lg font-bold text-white shadow-lg shadow-amber-500/25 transition hover:bg-amber-600 active:scale-[0.99] sm:w-auto sm:px-12"
           >
             QR을 찍는다
+            <span className="ml-2 text-xs font-medium opacity-80">직접 걸어 다니며</span>
+          </button>
+          <button
+            onClick={() => onStart('text')}
+            className="w-full rounded-xl border border-stone-300 bg-white px-6 py-4 font-semibold text-stone-700 shadow-sm transition hover:bg-stone-50 sm:w-auto"
+          >
+            텍스트로 플레이
           </button>
           <MusicToggle muted={muted} onToggle={onToggleMusic} moodName="tense" compact />
         </div>
@@ -66,7 +73,7 @@ export function EndingScreen({ state, onRestart, muted, mood, onToggleMusic }) {
   const win = ending.type === 'win'
 
   return (
-    <div className="mx-auto flex min-h-dvh max-w-3xl flex-col justify-center px-5 py-12">
+    <div data-qa="ending" data-ending={ending.key} className="mx-auto flex min-h-dvh max-w-3xl flex-col justify-center px-5 py-12">
       <div className="animate-[fadeUp_500ms_ease-out]">
         <div className="mb-2 flex items-center gap-3">
           <span
@@ -86,6 +93,28 @@ export function EndingScreen({ state, onRestart, muted, mood, onToggleMusic }) {
         <p className="mt-6 whitespace-pre-line text-[15px] leading-relaxed text-stone-700">
           {ending.body}
         </p>
+
+        {state.yearEnd?.length > 0 && (
+          <div className="mt-6 rounded-xl border border-amber-200 bg-amber-50/80 px-4 py-3">
+            <div className="mb-1.5 text-[11px] tracking-wide text-amber-700">1년 결산 — 아직 끝나지 않았던 일들</div>
+            <ul className="space-y-1 text-[13px] leading-relaxed text-amber-950">
+              {state.yearEnd.map((t, i) => (
+                <li key={i}>· {t}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {epilogueLines(flags).length > 0 && (
+          <div className="mt-6">
+            <div className="mb-2 text-[11px] tracking-[0.25em] text-stone-400">그 뒤의 이야기</div>
+            <ul className="space-y-2 border-l-2 border-stone-200 pl-4 text-[14px] leading-relaxed text-stone-600">
+              {epilogueLines(flags).map((t, i) => (
+                <li key={i}>{t}</li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {[

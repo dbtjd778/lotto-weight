@@ -16,3 +16,7 @@ desktop.ini
 # 환경변수
 .env
 .env.*
+
+# 자동 테스트 결과물 (스크린샷 포함) — 필요할 때 다시 만든다
+qa/sim/reports/
+qa/reports/

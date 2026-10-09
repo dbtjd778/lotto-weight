@@ -33,7 +33,7 @@ export default function Avatar({ id, size = 56, showName = false }) {
 }
 
 /** 획득한 물건/상태를 아이콘 스트립으로 보여준다 */
-const ITEMS = [
+export const ITEMS = [
   { flag: 'porsche', icon: '🏎️', label: '포르쉐 718' },
   { flag: 'boxster', icon: '🚗', label: '중고 박스터' },
   { flag: 'avante', icon: '🚙', label: '신형 아반떼' },

@@ -18,6 +18,15 @@
   }
 }
 
+@keyframes ring {
+  from {
+    transform: rotate(-2.5deg) translateY(0);
+  }
+  to {
+    transform: rotate(2.5deg) translateY(-2px);
+  }
+}
+
 html {
   color-scheme: light;
 }

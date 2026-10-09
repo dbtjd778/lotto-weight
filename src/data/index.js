@@ -6,6 +6,8 @@ import phase4 from './events.phase4.json'
 import phase4extra from './events.phase4.extra.json'
 import filler from './events.filler.json'
 import special from './events.special.json'
+import payoff from './events.payoff.json'
+import epilogue from './epilogue.json'
 
 /**
  * 이벤트 스키마
@@ -29,12 +31,17 @@ import special from './events.special.json'
  */
 
 const SCRIPTED = [...phase1, ...phase2, ...phase3]
-const POOL = [...phase4, ...phase4extra, ...filler]
+const POOL = [...phase4, ...phase4extra, ...payoff, ...filler]
 
 export const CAST = cast
 export const SCRIPTED_EVENTS = SCRIPTED
 export const PHASE4_POOL = POOL
 export const BREAKDOWN_EVENTS = special
+
+/** 엔딩의 '그 뒤의 이야기'. 플래그 하나당 한 줄, unless 플래그가 있으면 생략 */
+export function epilogueLines(flags, max = 5) {
+  return epilogue.filter((l) => flags[l.flag] && !flags[l.unless]).slice(0, max).map((l) => l.text)
+}
 
 export const ALL_EVENTS = [...SCRIPTED, ...POOL, ...special]
 

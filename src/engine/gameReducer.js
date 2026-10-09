@@ -1,9 +1,11 @@
 import { EVENT_MAP, START_EVENT_ID } from '../data'
-import { pickNextEvent } from './eventGenerator'
+import { pickNextEvent, pickBreakdownEvent } from './eventGenerator'
 
 export const GOAL_DAYS = 365
 export const BANKRUPT_LINE = 100_000_000 // 1억
 export const PAYOUT = 1_370_000_000
+/** 8년 차 직장인의 통장. 당첨 전 지출(샤워기 물값 등)이 마이너스로 찍히지 않게 */
+export const STARTING_SAVINGS = 4_180_000
 
 /**
  * 하루가 지날 때마다 잦아드는 비율 (정액이 아니라 비율).
@@ -30,7 +32,7 @@ export const DAILY_LIVING_COST = 95_000
 export const VISIBLE_FLAGS = [
   'porsche', 'boxster', 'rolex', 'gangnam_debt', 'maldives', 'landlord',
   'cafe', 'founder', 'quit', 'public_sponsor', 'moved_up', 'has_designer',
-  'told_friend', 'told_mom', 'leaked', 'youtube_out', 'wine_cellar',
+  'told_friend', 'told_mom', 'told_sis', 'leaked', 'youtube_out', 'wine_cellar',
 ]
 export const VISIBILITY_PRESSURE = 0.085 // 항목당 하루치
 
@@ -39,7 +41,7 @@ const clamp = (n, lo, hi) => Math.max(lo, Math.min(hi, n))
 export const initialState = {
   screen: 'title', // title | event | result | ending
   day: 0,
-  balance: 0,
+  balance: STARTING_SAVINGS,
   mental: 18,
   suspicion: 0,
   flags: {},
@@ -50,6 +52,7 @@ export const initialState = {
   pending: [], // 지연 효과
   log: [],
   ending: null,
+  yearEnd: [], // 1년이 끝날 때 한꺼번에 정산된 지연 효과 문구
   stats: { totalSpent: 0, choices: 0 },
 }
 
@@ -95,7 +98,9 @@ function checkEnding(s) {
         key: 'perfect',
         title: '완벽한 1년',
         body:
-          '1년이 지났다. 아무도 모른다. 회사에도 아직 다닌다.\n' +
+          `1년이 지났다. ${knownBy(s.flags) ? '아는 사람은 손에 꼽는다' : '아무도 모른다'}. ${
+            s.flags.quit || s.flags.founder ? '회사는 그만뒀지만, 그 이유를 아는 사람은 없다.' : '회사에도 아직 다닌다.'
+          }\n` +
           '잔고는 거의 그대로다.\n\n' +
           '달라진 건 하나뿐이다. 나는 이제 아무것도 안 해도 된다는 걸 안다.\n' +
           '그 사실을 아는 채로 평범하게 사는 것. 그게 이 게임의 정답이었다.',
@@ -108,7 +113,9 @@ function checkEnding(s) {
         title: '조용히 살아남다',
         body:
           '1년을 버텼다. 돈은 좀 줄었지만 사람은 안 줄었다.\n' +
-          '아무도 내가 로또에 당첨된 줄 모른다.\n\n' +
+          (knownBy(s.flags)
+            ? '아는 사람은 몇 명뿐이고, 그 사람들은 입을 다물어 줬다.\n\n'
+            : '아무도 내가 로또에 당첨된 줄 모른다.\n\n') +
           '가끔 그 토요일 밤이 떠오른다. 그때 그 냉장고 소리도.',
       }
     }
@@ -124,6 +131,11 @@ function checkEnding(s) {
     }
   }
   return null
+}
+
+/** 비밀을 아는 사람이 있는가 */
+function knownBy(f) {
+  return !!(f.told_mom || f.told_friend || f.told_partner || f.told_sis || f.leaked)
 }
 
 function resolvePending(s, daysPassed) {
@@ -197,8 +209,9 @@ export function gameReducer(state, action) {
       const ev = state.current
       const nextId = state.result?.nextEventId
 
-      // 시간 경과 (스크립트 구간은 하루씩, Phase 4는 이벤트별 days)
-      const daysPassed = nextId && nextId !== 'PHASE4' ? 1 : (ev.days ?? 4)
+      // 시간 경과. 1~3교시는 토요일 밤부터 월요일 오후까지의 이야기라 장면이 바뀌어도
+      // 날짜는 거의 안 간다 (밤을 넘기는 장면에만 days: 1). 4교시는 이벤트별 days.
+      const daysPassed = ev.phase <= 3 ? (ev.days ?? 0) : (ev.days ?? 4)
       const day = state.day + daysPassed
 
       // 지연 효과 정산
@@ -207,6 +220,13 @@ export function gameReducer(state, action) {
       for (const p of resolved) {
         acc = applyEffect(acc, p)
       }
+
+      // 1년이 다 됐으면 아직 안 끝난 일들도 지금 결산한다 (투자 회수, 빌려준 돈 등)
+      const yearEnd = day >= GOAL_DAYS && state.flags.received ? still.splice(0) : []
+      for (const p of yearEnd) acc = applyEffect(acc, p)
+
+      // 선택 직후(+지연 정산)의 스트레스가 한계를 넘었는가
+      const breaking = state.flags.received && acc.mental >= 100
 
       // 시간이 약이다 — 지나간 날만큼 소문과 스트레스가 잦아든다.
       // 단 하루에 잦아드는 양에는 상한이 있다. 상한이 없으면 의심도가 높을수록
@@ -226,7 +246,7 @@ export function gameReducer(state, action) {
         mental: clamp(menAfter, 0, 100),
       }
 
-      let s = { ...state, ...acc, day, pending: still }
+      let s = { ...state, ...acc, day, pending: still, yearEnd: yearEnd.map((p) => p.text).filter(Boolean) }
 
       const ending = checkEnding(s)
       if (ending) {
@@ -238,13 +258,11 @@ export function gameReducer(state, action) {
       if (nextId && nextId !== 'PHASE4') {
         current = EVENT_MAP[nextId]
       } else {
-        current = pickNextEvent(s)
+        current = breaking ? pickBreakdownEvent(s) : pickNextEvent(s)
       }
 
-      // 붕괴 이벤트를 소비했으면 스트레스를 일부 회복시켜 무한 루프를 막는다
-      if (s.mental >= 100 && current?.category === '붕괴') {
-        s = { ...s, mental: 96 }
-      }
+      // 붕괴 이벤트는 한계에서 시작한다. 거기서 고르는 선택이 스트레스를 크게 덜어낸다
+      if (breaking) s = { ...s, mental: 100 }
 
       return {
         ...s,

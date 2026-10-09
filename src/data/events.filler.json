@@ -1,7 +1,7 @@
 [
   {
     "id": "f_01_delivery",
-    "phase": 4, "category": "일상", "speaker": "me", "weight": 4, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 2, "days": 3, "repeatable": true,
     "title": "배달앱 최소주문금액",
     "description": "치킨 하나 시키려는데 최소주문 18,000원. 항상 여기서 사이드를 하나 더 넣었다.",
     "options": [
@@ -11,7 +11,7 @@
   },
   {
     "id": "f_02_taxi",
-    "phase": 4, "category": "일상", "speaker": "me", "weight": 4, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 2, "days": 3, "repeatable": true,
     "title": "막차 vs 택시",
     "description": "11시 42분. 막차까지 8분. 뛰면 탄다. 택시는 2만 3천 원.",
     "options": [
@@ -21,7 +21,7 @@
   },
   {
     "id": "f_03_grocery",
-    "phase": 4, "category": "일상", "speaker": "me", "weight": 4, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 2, "days": 3, "repeatable": true,
     "title": "마트에서",
     "description": "한우 채끝 100g에 12,800원. 옆에 수입 부챗살은 100g에 3,200원.",
     "options": [
@@ -32,7 +32,7 @@
   },
   {
     "id": "f_04_phone",
-    "phase": 4, "category": "일상", "speaker": "me", "weight": 3, "days": 4, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 1.5, "days": 4, "repeatable": true,
     "title": "액정이 깨졌다",
     "description": "3년 쓴 폰이다. 수리비 18만 원, 신제품 최고 사양은 210만 원.",
     "options": [
@@ -43,7 +43,7 @@
   },
   {
     "id": "f_05_coffee",
-    "phase": 4, "category": "일상", "speaker": "me", "weight": 4, "days": 2, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 2, "days": 2, "repeatable": true,
     "title": "아메리카노",
     "description": "회사 앞 카페 4,800원. 편의점 1,500원. 사무실 믹스커피는 공짜.",
     "options": [
@@ -53,7 +53,7 @@
   },
   {
     "id": "f_06_lotto_again",
-    "phase": 4, "category": "일상", "speaker": "me", "weight": 3, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 1.5, "days": 3, "repeatable": true,
     "title": "또 로또를 산다",
     "description": "편의점 앞에서 발이 멈췄다. 이미 됐는데. 이미 됐는데도 손이 간다.",
     "options": [
@@ -64,7 +64,7 @@
   },
   {
     "id": "f_07_gas",
-    "phase": 4, "category": "일상", "speaker": "me", "weight": 3, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 1.5, "days": 3, "repeatable": true,
     "title": "주유소",
     "description": "예전엔 3만 원어치만 넣었다. 리터당 20원 싼 곳을 찾아 3km를 돌아간 적도 있다.",
     "options": [
@@ -74,7 +74,7 @@
   },
   {
     "id": "f_08_hair",
-    "phase": 4, "category": "일상", "speaker": "me", "weight": 3, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 1.5, "days": 3, "repeatable": true,
     "title": "미용실",
     "description": "동네 만 원 컷 vs 청담동 디자이너 12만 원.",
     "options": [
@@ -84,7 +84,7 @@
   },
   {
     "id": "f_09_umbrella",
-    "phase": 4, "category": "일상", "speaker": "system", "weight": 3, "days": 2, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "system", "weight": 1.5, "days": 2, "repeatable": true,
     "title": "갑자기 비",
     "description": "편의점 우산 5,000원. 뛰면 10분.",
     "options": [
@@ -94,7 +94,7 @@
   },
   {
     "id": "f_10_saving",
-    "phase": 4, "category": "일상", "speaker": "system", "weight": 3, "days": 4, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "system", "weight": 1.5, "days": 4, "repeatable": true,
     "title": "적금 만기 알림",
     "description": "3년 부은 적금이 만기됐다. 원금 1,080만 원, 이자 62만 원.\n\n예전엔 이 숫자가 인생의 전부였다.",
     "options": [
@@ -104,7 +104,7 @@
   },
   {
     "id": "f_11_gift_self",
-    "phase": 4, "category": "일상", "speaker": "me", "weight": 3, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 1.5, "days": 3, "repeatable": true,
     "title": "장바구니 정리",
     "description": "2년 전부터 담아둔 것들. 다 합쳐서 34만 원.",
     "options": [
@@ -114,7 +114,7 @@
   },
   {
     "id": "f_12_medical",
-    "phase": 4, "category": "일상", "speaker": "system", "weight": 3, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "system", "weight": 1.5, "days": 3, "repeatable": true,
     "title": "이가 시리다",
     "description": "1년 전부터 미뤘다. 신경치료에 크라운까지 하면 90만 원이란다.",
     "options": [
@@ -124,7 +124,7 @@
   },
   {
     "id": "f_13_parents_call",
-    "phase": 4, "category": "일상", "speaker": "mom", "weight": 4, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "mom", "weight": 2, "days": 3, "repeatable": true,
     "title": "엄마의 안부 전화",
     "description": "밥은 먹었나. 요새 회사는 우예 되노.\n\n평범한 질문인데 심장이 뛴다.",
     "options": [
@@ -135,7 +135,7 @@
   },
   {
     "id": "f_14_work_ot",
-    "phase": 4, "category": "일상", "speaker": "boss", "weight": 3, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "boss", "weight": 1.5, "days": 3, "repeatable": true,
     "cond": { "forbidFlags": ["quit"] },
     "title": "야근",
     "description": "8시 반. 팀장이 커피를 사왔다. 오늘 좀만 더 하자.\n\n예전엔 야근수당 4만 8천 원이 아쉬웠다.",
@@ -146,7 +146,7 @@
   },
   {
     "id": "f_15_subscription_audit",
-    "phase": 4, "category": "일상", "speaker": "me", "weight": 3, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 1.5, "days": 3, "repeatable": true,
     "title": "카드 명세서",
     "description": "안 쓰는 구독이 아홉 개다. 합치면 월 8만 4천 원.\n\n예전엔 매달 이걸 정리했다.",
     "options": [
@@ -156,7 +156,7 @@
   },
   {
     "id": "f_16_night_walk",
-    "phase": 4, "category": "일상", "speaker": "me", "weight": 3, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 1.5, "days": 3, "repeatable": true,
     "title": "밤 산책",
     "description": "잠이 안 온다. 창원천을 따라 걷는다.\n\n러닝하는 사람들, 강아지 산책시키는 사람들. 아무도 나를 모른다.",
     "options": [
@@ -166,7 +166,7 @@
   },
   {
     "id": "f_17_donate_small",
-    "phase": 4, "category": "일상", "speaker": "system", "weight": 2, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "system", "weight": 1, "days": 3, "repeatable": true,
     "title": "지하철역 모금함",
     "description": "예전엔 그냥 지나쳤다. 지금은 지갑에 현금도 없다.",
     "options": [
@@ -176,7 +176,7 @@
   },
   {
     "id": "f_18_old_friend_ok",
-    "phase": 4, "category": "일상", "speaker": "friend", "weight": 3, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "friend", "weight": 1.5, "days": 3, "repeatable": true,
     "title": "그냥 술 한잔",
     "description": "상현이가 연락했다. 돈 얘기 없이. 그냥 한잔 하자고.\n\n요즘 이런 연락이 제일 반갑다.",
     "options": [
@@ -187,7 +187,7 @@
   },
   {
     "id": "f_19_insurance_call",
-    "phase": 4, "category": "일상", "speaker": "scam", "weight": 3, "days": 2, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "scam", "weight": 1.5, "days": 2, "repeatable": true,
     "title": "또 모르는 번호",
     "description": "하루에 세 통씩 온다. 대출, 보험, 투자.\n\n예전엔 하루에 한 통도 안 왔다.",
     "options": [
@@ -197,7 +197,7 @@
   },
   {
     "id": "f_20_mirror",
-    "phase": 4, "category": "일상", "speaker": "me", "weight": 2, "days": 3, "repeatable": true,
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 1, "days": 3, "repeatable": true,
     "title": "거울",
     "description": "샤워하고 나와서 거울을 봤다. 살이 좀 빠졌다. 아니, 얼굴이 상했다.\n\n13억이 생기고 나서 6kg가 빠졌다.",
     "options": [

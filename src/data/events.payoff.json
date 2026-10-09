@@ -1,0 +1,199 @@
+[
+  {
+    "id": "pay_cloud_album",
+    "phase": 4, "category": "가족", "speaker": "sis", "weight": 4, "days": 3,
+    "cond": { "minDay": 4, "maxDay": 90, "requireFlags": ["cloud_photo"] },
+    "title": "가족 공유 앨범",
+    "description": "\"오빠 가족앨범에 올라온 종이 사진 뭐야?\"\n\"엄마가 확대해서 보고 있음 ㅋㅋ\"\n\n그 주말, 용지를 찍어 올린 클라우드. 가족 공유 앨범과 같은 계정이었다. 나중에 생각하기로 했던 그 나중이 지금이다.",
+    "options": [
+      { "text": "바로 지우고 \"회사 서류 잘못 올렸다\"", "effect": { "mental": 8, "suspicion": 6 }, "result": "지웠다. 엄마는 이미 캡처를 했을까. 그건 영원히 모른다." },
+      { "text": "\"낙첨 인증ㅋㅋ\" 하고 웃어넘긴다", "effect": { "mental": 4, "suspicion": -4 }, "result": "\"번호 하나도 안 맞네 ㅋㅋ\" 동생은 번호를 확인하지 않았다. 확인했으면 끝이었다." },
+      { "text": "동생한테만 따로 전화해서 사실대로 말한다", "effect": { "mental": -10, "suspicion": 14 }, "flags": ["told_sis"], "result": "동생은 30초 동안 아무 말도 안 했다. 그리고 \"엄마한텐 절대 말하지 마\"라고 했다. 그건 내가 할 말이었다." }
+    ]
+  },
+  {
+    "id": "pay_boss_sick",
+    "phase": 4, "category": "회사", "speaker": "boss", "weight": 40, "days": 2,
+    "cond": { "maxDay": 45, "requireFlags": ["excuse_sick"] },
+    "title": "진단서는?",
+    "description": "\"야, 그 장염. 진단서 아직 안 냈더라.\"\n\n김 팀장은 잊지 않는다. 결재 서류에 빈칸이 있는 걸 못 견디는 사람이다. 그날 나는 응급실이 아니라 15층에 있었다.",
+    "options": [
+      { "text": "\"응급실 대기가 길어서 그냥 나왔습니다\"", "effect": { "mental": 6, "suspicion": 4 }, "result": "\"그럼 연차로 돌려.\" 팀장은 의심하지 않았다. 귀찮아했을 뿐이다. 다행이었다." },
+      { "text": "솔직하게 \"개인 사정이었습니다\"라고 정정한다", "effect": { "mental": -4, "suspicion": 8 }, "result": "\"처음부터 그렇게 말하지.\" 팀장의 눈이 한 번 더 나를 훑었다. 거짓말이 하나 줄었다. 질문은 하나 늘었다." },
+      { "text": "\"내일 드릴게요\" 하고 계속 미룬다", "effect": { "mental": 12, "suspicion": 2 }, "result": "다음 날도, 그다음 날도 팀장은 물었다. 결국 경위서를 썼다. 거짓말은 유지비가 든다." }
+    ]
+  },
+  {
+    "id": "pay_boss_awol",
+    "phase": 4, "category": "회사", "speaker": "boss", "weight": 80, "days": 3,
+    "cond": { "maxDay": 30, "requireFlags": ["excuse_awol"] },
+    "title": "인사팀 면담",
+    "description": "무단결근 다음 날, 책상 위에 인사팀 면담 일정이 붙어 있었다.\n\n\"월요일에 연락이 안 된 사유를 소명해 주세요.\" 회의실 공기가 차갑다. 휴대폰 부재중 11통의 주인공이 맞은편에 앉아 있다.",
+    "options": [
+      { "text": "\"집안에 급한 일이 있었습니다\" 그 이상은 말 안 한다", "effect": { "mental": 10, "suspicion": 6 }, "result": "경고 1회. 인사기록에 남았다. 이 회사에서 내 미래는 이제 상관없지만, 그걸 아는 건 나뿐이다." },
+      { "text": "\"폰이 고장 났었습니다\"", "effect": { "mental": 6, "suspicion": 10 }, "result": "\"그럼 오늘 쓰는 그 폰은요?\" 인사팀 과장은 친절했다. 친절해서 더 무서웠다." },
+      { "text": "고개 숙여 사과하고 경위서를 쓴다", "effect": { "mental": 4, "suspicion": -6 }, "result": "반성문 같은 경위서 A4 한 장. 13억 7천을 가진 사람이 쓰기엔 이상한 글이었다. 그래서 오히려 아무도 의심하지 않았다." }
+    ]
+  },
+  {
+    "id": "pay_boss_ancestor",
+    "phase": 4, "category": "회사", "speaker": "boss", "weight": 3, "days": 2,
+    "cond": { "minDay": 25, "maxDay": 150, "requireFlags": ["excuse_ancestor"] },
+    "title": "외할머니 제사",
+    "description": "\"야, 너 그때 외할머니 제사라 했지?\"\n\n김 팀장이 웃으며 다가온다. \"우리 어머니가 창원 노인대학 다니시는데, 니 성 쓰는 할머니가 정정하시다던데? 혹시 그분 아니가?\"\n\n세상은 좁고, 창원은 더 좁다.",
+    "options": [
+      { "text": "\"친할머니 쪽 큰댁 제사였습니다\" 말을 바꾼다", "effect": { "mental": 10, "suspicion": 8 }, "result": "\"아 그래?\" 팀장은 고개를 끄덕였다. 나는 그날 밤 우리 집안 족보를 외웠다." },
+      { "text": "웃으면서 \"그날 사실 땡땡이였습니다\"", "effect": { "mental": -6, "suspicion": -2 }, "result": "\"이 자식 봐라.\" 팀장이 내 등을 쳤다. 작은 거짓말을 인정하니까 큰 거짓말이 숨었다." },
+      { "text": "못 들은 척 모니터만 본다", "effect": { "mental": 8, "suspicion": 6 }, "result": "팀장은 어깨를 으쓱하고 갔다. 다음 주 외할머니 생신에 이 얘기가 나오지 않기를 빈다." }
+    ]
+  },
+  {
+    "id": "pay_freeze_6m",
+    "phase": 4, "category": "투자", "speaker": "pb", "weight": 6, "days": 4,
+    "cond": { "minDay": 180, "maxDay": 260, "requireFlags": ["freeze_6m"] },
+    "title": "6개월이 지났습니다",
+    "description": "\"고객님, 이 차장입니다. 6개월 됐네요.\"\n\n15층에서 \"6개월은 아무것도 안 할 겁니다\"라고 했었다. 그때 그는 처음으로 진심 같은 말을 했다. \"약속 지키신 분은 제 고객 중에 처음입니다.\"\n\n예금 이자가 쌓여 있다. 그리고 이제, 들어볼 이야기가 생겼다고 한다.",
+    "options": [
+      { "text": "\"6개월 더 아무것도 안 하겠습니다\"", "effect": { "balance": 20500000, "mental": -12, "suspicion": -4 }, "flags": ["freeze_held"], "result": "이자 2,050만 원이 들어왔다. 아무것도 안 하고 번 돈이다. 아무것도 안 하는 게 이렇게 어려운 줄 몰랐다." },
+      { "text": "이자는 받고, 이야기는 들어본다", "effect": { "balance": 20500000, "mental": -4, "suspicion": 2 }, "flags": ["pb_meeting"], "result": "이번에는 상품 설명서를 끝까지 읽었다. 반년 전의 나였으면 첫 장에서 서명했을 것이다." }
+    ]
+  },
+  {
+    "id": "pay_split_bank",
+    "phase": 4, "category": "행정", "speaker": "system", "weight": 3, "days": 3,
+    "cond": { "minDay": 60, "requireFlags": ["split_deposit"] },
+    "title": "주거래 은행 전산 장애",
+    "description": "뉴스 속보. 한 시중은행 전산 장애 9시간째. 이체·출금 전면 중단.\n\n단톡방이 난리다. \"월급 묶임\" \"카드값 어떡함\".\n\n15층에서 5천만 원씩 쪼개 달라고 했었다. 이 차장이 눈썹을 올렸던 그 결정.",
+    "options": [
+      { "text": "다른 은행 앱을 켜고 평소처럼 장을 본다", "effect": { "mental": -14 }, "result": "다른 통장은 멀쩡했다. 단톡방에 \"나도 묶임 ㅠ\"이라고 쳤다. 같이 불평하는 것도 위장의 일부다." },
+      { "text": "그래도 불안해서 지점에 직접 가 본다", "effect": { "mental": 4, "suspicion": 3 }, "result": "지점 앞에 줄이 길었다. 그 줄에 서 있는 사람 중 나만 잃을 게 없었다. 그래서 더 이상한 기분이었다." }
+    ]
+  },
+  {
+    "id": "pay_insurance_y2",
+    "phase": 4, "category": "행정", "speaker": "pb", "weight": 14, "days": 3,
+    "cond": { "minDay": 270, "requireFlags": ["insurance"] },
+    "title": "종신보험 2년 차 납입 안내",
+    "description": "15층에서 가입한 종신보험. 2년 차 보험료 3,840만 원 납입 안내가 왔다.\n\n해지 환급금을 조회해 봤다. 940만 원. 1년 전에 낸 돈의 4분의 1이다.\n\n\"10년 안에 해지하면 원금도 못 건진다\"는 건, 그때도 설명서 어딘가에 쓰여 있었을 것이다.",
+    "options": [
+      { "text": "계속 낸다. 이미 낸 돈이 아깝다", "effect": { "balance": -38400000, "mental": 6, "suspicion": 1 }, "flags": ["insurance_kept"], "result": "자동이체를 확인했다. 이미 낸 돈이 아까워서 더 내는 것. 이게 매몰비용이라는 걸 알면서도 눌렀다." },
+      { "text": "감액해서 납입액을 줄인다", "effect": { "balance": -12000000, "mental": -2 }, "result": "보장은 줄고 납입액도 줄었다. 어중간한 결정이었지만, 어중간한 게 가끔은 맞다." },
+      { "text": "해지한다. 940만 원이라도 돌려받는다", "effect": { "balance": 9400000, "mental": 10, "suspicion": -2 }, "result": "2,900만 원짜리 수업이었다. 다음엔 설명서 마지막 장부터 읽기로 했다." }
+    ]
+  },
+  {
+    "id": "pay_coin_hold",
+    "phase": 4, "category": "투자", "speaker": "friend", "weight": 6, "days": 4,
+    "cond": { "minDay": 90, "requireFlags": ["coin_200"] },
+    "title": "존버의 끝",
+    "description": "\"봐라, 반등 온다 했제?\"\n\n상현이가 차트 캡처를 보낸다. 바닥에서 조금 올라왔다. 그래도 아직 2억이 아니다. 지금 팔면 1억 3천쯤.\n\n하루 40번씩 보던 차트를 이제 하루 80번 본다.",
+    "options": [
+      { "text": "전부 판다. 1억 3천이라도 건진다", "effect": { "balance": 130000000, "mental": -18, "suspicion": -2 }, "result": "매도 체결. 7천만 원짜리 수업료를 냈다. 차트 앱을 지웠다. 그날 밤 처음으로 푹 잤다." },
+      { "text": "반만 판다", "effect": { "balance": 65000000, "mental": -6 }, "delayed": { "afterDays": 60, "balance": 52000000, "mental": 6, "text": "남은 절반은 다시 빠졌다. 5,200만 원에 던졌다. 상현이는 \"니가 팔아서 떨어졌다\"고 했다." }, "result": "반은 지키고 반은 믿었다. 상현이는 \"쫄보\"라고 했다. 이번엔 그 소리가 칭찬 같았다." },
+      { "text": "더 버틴다. 상현이 말이 맞을지도", "effect": { "mental": 14, "suspicion": 2 }, "delayed": { "afterDays": 75, "balance": 64000000, "mental": 22, "text": "−68%. 6,400만 원에 결국 던졌다. 상현이는 그 뒤로 코인 얘기를 안 한다. 나도 안 한다." }, "result": "\"존버는 승리한다.\" 상현이와 같은 말을 하고 있는 내가 무서웠다." }
+    ]
+  },
+  {
+    "id": "pay_uncle_repay",
+    "phase": 4, "category": "가족", "speaker": "uncle", "weight": 5, "days": 4,
+    "cond": { "minDay": 170, "requireFlags": ["uncle_iou"] },
+    "title": "작은아버지의 봉투",
+    "description": "작은아버지가 다시 창원에 오셨다. 이번엔 빈손이 아니다.\n\n\"차용증 쓰자 캤을 때 서운했다. 근데 그 종이가 있으니까 갚아야 할 날짜가 생기더라.\"\n\n두꺼운 봉투가 식탁 위에 놓인다.",
+    "options": [
+      { "text": "감사히 받는다", "effect": { "balance": 10000000, "mental": -14, "suspicion": -6 }, "flags": ["uncle_repaid"], "result": "작은아버지는 차용증을 돌려받아 그 자리에서 찢으셨다. 집안 최초의 '빌려준 돈이 돌아온 사건'이었다." },
+      { "text": "반은 사촌 동생 학비에 보태시라고 돌려드린다", "effect": { "balance": 5000000, "mental": -18, "suspicion": 2 }, "flags": ["uncle_repaid"], "result": "\"니가 무슨 돈이 있어서.\" 작은아버지가 날 오래 봤다. 그 시선이 조금 무서웠지만, 봉투를 받는 손은 따뜻했다." }
+    ]
+  },
+  {
+    "id": "pay_cousin_ask",
+    "phase": 4, "category": "가족", "speaker": "system", "weight": 5, "days": 4,
+    "cond": { "minDay": 150, "requireFlags": ["uncle_loan"] },
+    "title": "사촌 형의 연락",
+    "description": "\"아버지한테 3천 빌려줬다며? 너 요즘 잘 되나 보다.\"\n\n사촌 형이다. 마지막으로 연락한 게 할머니 장례식이었다.\n\n\"나도 딱 2천만 좀. 가게 보증금이 모자라서.\" 빌린다는 말은 이 집안에서 준다는 뜻이다.",
+    "options": [
+      { "text": "2천 보낸다. 집안 평화 값이다", "effect": { "balance": -20000000, "mental": 10, "suspicion": 14 }, "result": "다음 달 명절, 큰고모가 나를 따로 불렀다. 소문은 송금보다 빠르다." },
+      { "text": "\"작은아버지 건 차용증 쓸 걸 그랬다\"며 거절한다", "effect": { "mental": 12, "suspicion": -6 }, "result": "\"치사하다.\" 사촌 형은 그렇게 말하고 끊었다. 치사한 게 파산보다는 낫다." },
+      { "text": "\"그 3천도 사실 대출받은 거야\"라고 둘러댄다", "effect": { "mental": 6, "suspicion": -10 }, "result": "사촌 형은 오히려 미안해했다. 거짓말이 사람을 미안하게 만드는 걸 보고 더 미안해졌다." }
+    ]
+  },
+  {
+    "id": "pay_dog_sick",
+    "phase": 4, "category": "생활", "speaker": "system", "weight": 4, "days": 5,
+    "cond": { "minDay": 60, "requireFlags": ["dog"] },
+    "title": "콩이가 밥을 안 먹는다",
+    "description": "보호소에서 데려온 지 두 달. 이틀째 밥그릇이 그대로다.\n\n동물병원 원장님이 엑스레이를 보여준다. 장에 뭔가 걸렸다. 수술비 340만 원.\n\n예전의 나였으면 340만 원 앞에서 오래 고민했을 것이다.",
+    "options": [
+      { "text": "바로 수술한다", "effect": { "balance": -3400000, "mental": -16 }, "result": "수술은 잘 됐다. 콩이가 마취에서 깨서 제일 먼저 내 손을 핥았다. 돈으로 산 것 중 제일 잘 쓴 340만 원이었다." },
+      { "text": "제일 좋은 대학병원으로 옮긴다 (900만)", "effect": { "balance": -9000000, "mental": -12, "suspicion": 6 }, "result": "대학병원 보호자 대기실에서 누가 물었다. \"어머, 비싼 데 오셨네요. 무슨 일 하세요?\" 콩이는 잘 나았다. 질문은 오래 남았다." }
+    ]
+  },
+  {
+    "id": "pay_partner_shield",
+    "phase": 4, "category": "인간관계", "speaker": "system", "weight": 5, "days": 4,
+    "cond": { "minDay": 160, "requireFlags": ["told_partner"] },
+    "title": "그 사람이 대신 막아줬다",
+    "description": "그 사람의 친구 모임에 따라갔다. 누가 웃으며 말한다.\n\n\"요즘 남자친구 씀씀이가 좀 달라졌다며? 뭐 하는 사람이야?\"\n\n대답하려는데, 그 사람이 먼저 입을 연다.",
+    "options": [
+      { "text": "그 사람에게 맡긴다", "effect": { "mental": -16, "suspicion": -10 }, "result": "\"얘가? 커피값도 반반 내는 애야.\" 모두 웃었다. 처음으로, 비밀을 같이 들어주는 사람이 있다는 게 어떤 건지 알았다." },
+      { "text": "불안해서 내가 먼저 길게 해명한다", "effect": { "mental": 6, "suspicion": 8 }, "result": "말이 길어질수록 표정들이 궁금해졌다. 집에 오는 길에 그 사람이 말했다. \"다음엔 그냥 나한테 맡겨.\"" }
+    ]
+  },
+  {
+    "id": "pay_therapy_end",
+    "phase": 4, "category": "건강", "speaker": "system", "weight": 4, "days": 3,
+    "cond": { "minDay": 120, "requireFlags": ["therapy"] },
+    "title": "마지막 상담",
+    "description": "\"오늘이 정해 둔 마지막 회기예요.\"\n\n상담실 소파는 처음 왔을 때랑 같은 자리에 있다. 그때는 이 소파에 앉아서 30분 동안 아무 말도 못 했다.\n\n\"처음 오셨을 때 했던 말, 기억나세요?\"",
+    "options": [
+      { "text": "\"돈이 생겼는데 왜 더 불행하냐고 물었죠\"", "effect": { "mental": -18 }, "result": "\"지금은요?\" 대답 대신 웃었다. 선생님도 웃었다. 그걸로 충분했다." },
+      { "text": "몇 번 더 오겠다고 연장한다", "effect": { "balance": -960000, "mental": -12 }, "result": "8회를 더 잡았다. 도움받는 걸 부끄러워하지 않는 것. 그게 이 1년에서 배운 것 중 하나다." }
+    ]
+  },
+  {
+    "id": "pay_drunk_text",
+    "phase": 4, "category": "위기", "speaker": "me", "weight": 5, "days": 3,
+    "cond": { "minDay": 40, "requireFlags": ["drinking"], "forbidFlags": ["sober"] },
+    "title": "새벽 2시 13분, 단톡방",
+    "description": "눈을 떠 보니 소주병 세 개와 켜진 휴대폰.\n\n동기 단톡방 입력창에 문장이 쳐져 있다.\n\n'나 사실 로또'\n\n전송 버튼까지 1센티미터. 언제 쳤는지 기억이 안 난다.",
+    "options": [
+      { "text": "한 글자씩 지우고 폰을 멀리 던진다", "effect": { "mental": 10 }, "result": "지웠다. 손이 떨렸다. 다음 날 아침, 소주를 전부 싱크대에 부었다." },
+      { "text": "'나 사실 로또 또 꽝ㅋㅋ'로 고쳐서 보낸다", "effect": { "mental": 4, "suspicion": 4 }, "result": "\"ㅋㅋㅋ 누가 로또를 아직 사냐\" 다들 웃었다. 상현이만 답이 없었다." },
+      { "text": "술을 끊기로 하고 병원 예약을 잡는다", "effect": { "balance": -120000, "mental": -8 }, "flags": ["sober"], "result": "\"알코올 의존 초기입니다.\" 의사의 말이 이상하게 안심이 됐다. 이름이 붙은 문제는 고칠 수 있으니까." }
+    ]
+  },
+  {
+    "id": "pay_will_tell_one",
+    "phase": 4, "category": "인간관계", "speaker": "me", "weight": 4, "days": 3,
+    "cond": { "minDay": 50, "maxDay": 200, "requireFlags": ["will_tell_one"], "forbidFlags": ["told_friend", "told_mom", "told_partner", "told_sis"] },
+    "title": "그 한 명",
+    "description": "\"그 한 명이 보통 두 명한테 말합니다.\"\n\n15층에서 이 차장이 웃지 않고 했던 말. 그때 나는 한 명한테는 말해야 안 미칠 것 같다고 했었다.\n\n두 달이 지났다. 아직 아무한테도 안 했다. 그리고 미칠 것 같다.",
+    "options": [
+      { "text": "공책을 사서, 아무한테도 못 하는 말을 적는다", "effect": { "balance": -8000, "mental": -14 }, "result": "8천 원짜리 공책이 제일 입이 무거운 친구가 됐다. 첫 장에 13억 7천만 원이라고 썼다. 손이 덜 떨렸다." },
+      { "text": "익명 커뮤니티에 \"로또 1등 됐는데 아무한테도 못 말함\"이라고 쓴다", "effect": { "mental": -6, "suspicion": 8 }, "result": "댓글 300개. 절반은 인증하라고 했고 절반은 축하했다. 동네 이름은 안 썼다. 그래도 그날 밤은 무서웠다." },
+      { "text": "참는다. 이 차장 말이 맞다", "effect": { "mental": 10, "suspicion": -6 }, "result": "참았다. 대신 샤워할 때 혼잣말이 늘었다." }
+    ]
+  },
+  {
+    "id": "pay_quit_weekday",
+    "phase": 4, "category": "생활", "speaker": "system", "weight": 4, "days": 3,
+    "cond": { "minDay": 90, "requireFlags": ["quit"] },
+    "title": "평일 오후 두 시",
+    "description": "퇴사 후 처음 맞는 평일 낮. 동네가 이렇게 조용한 줄 몰랐다.\n\n놀이터 벤치에 앉아 있는데 아랫집 아주머니가 지나간다.\n\n\"어머, 총각. 오늘 회사 안 갔어? 요즘 자주 보이네?\"",
+    "options": [
+      { "text": "\"재택근무예요\" 노트북 가방을 들고 다니기 시작한다", "effect": { "mental": 6, "suspicion": -6 }, "result": "빈 노트북 가방을 들고 카페에 간다. 퇴사하고 출근하는 시늉을 하는 사람은 아마 나뿐일 것이다." },
+      { "text": "\"이직 준비 중이에요\"", "effect": { "mental": 2, "suspicion": 2 }, "result": "\"요즘 다 어렵다더라.\" 아주머니는 다음 주 반찬을 갖다주셨다. 그게 더 미안했다." },
+      { "text": "웃기만 한다", "effect": { "mental": 4, "suspicion": 8 }, "result": "웃는 백수. 동네에서 가장 수상한 존재가 되는 데 일주일이 걸렸다." }
+    ]
+  },
+  {
+    "id": "pay_camouflage_6m",
+    "phase": 4, "category": "회사", "speaker": "boss", "weight": 4, "days": 4,
+    "cond": { "minDay": 250, "requireFlags": ["camouflage_work"], "forbidFlags": ["quit"] },
+    "title": "위장 근무 6개월",
+    "description": "\"너 요즘 이상하게 여유롭다?\"\n\n김 팀장이 고개를 갸웃한다. 실적 압박에도, 야근에도, 회식 2차에도 이제 화가 안 난다.\n\n회사는 세상에서 제일 완벽한 알리바이였다. 6개월이 지났다.",
+    "options": [
+      { "text": "계속 다닌다. 1년은 채운다", "effect": { "mental": 4, "suspicion": -12 }, "result": "\"마음을 비웠습니다.\" 팀장은 감탄했다. 반쯤은 진짜였다." },
+      { "text": "이제 그만둔다", "effect": { "mental": -20, "suspicion": 14 }, "flags": ["quit"], "result": "사직서를 냈다. 팀장은 붙잡지 않았다. \"너 요즘 여유롭더라니.\" 들킨 건지 아닌지는 끝까지 모르겠다." }
+    ]
+  }
+]

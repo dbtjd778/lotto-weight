@@ -270,7 +270,7 @@
   },
   {
     "id": "p4x_23_junior_again",
-    "phase": 4, "category": "배신", "speaker": "junior", "weight": 2, "days": 4,
+    "phase": 4, "category": "배신", "speaker": "junior", "weight": 6, "days": 4,
     "cond": { "minDay": 170, "requireFlags": ["invested_junior"] },
     "title": "지훈이가 또 왔다",
     "description": "형, 이번엔 진짜예요. 저번 건 시장이 안 좋았던 거고요. 3천만 원만 더...\n\n지난번 5천만 원의 사용내역서는 아직도 못 받았다.",
@@ -359,8 +359,8 @@
     "title": "연 14% 부동산 P2P",
     "description": "광고가 말한다. 담보인정비율 62%, 연 14%, 원금 보장형.\n\n원금 보장형이라는 단어 옆에 아주 작은 별표가 있다.",
     "options": [
-      { "text": "1억 넣는다", "effect": { "balance": -100000000, "mental": 10, "suspicion": 2 }, "flags": ["p2p"], "delayed": { "afterDays": 90, "balance": 32000000, "mental": -6, "text": "다행히 상환됐다. 원금 1억 + 이자 3,200만 원. 되고 나서야 무서워졌다." }, "result": "별표 아래 작은 글씨는 안 읽었다. 항상 그 글씨가 문제다." },
-      { "text": "3천만 원만 테스트", "effect": { "balance": -30000000, "mental": 4 }, "delayed": { "afterDays": 90, "balance": 9600000, "mental": -4, "text": "3천만 원 + 이자 960만 원 상환 완료." }, "result": "잃어도 되는 만큼. 이 원칙이 나를 몇 번 살렸다." },
+      { "text": "1억 넣는다", "effect": { "balance": -100000000, "mental": 10, "suspicion": 2 }, "flags": ["p2p"], "delayed": { "afterDays": 90, "balance": 103500000, "mental": -6, "text": "다행히 상환됐다. 원금 1억 + 이자 350만 원. 되고 나서야 무서워졌다. 350만 원 벌자고 1억을 걸었던 거다." }, "result": "별표 아래 작은 글씨는 안 읽었다. 항상 그 글씨가 문제다." },
+      { "text": "3천만 원만 테스트", "effect": { "balance": -30000000, "mental": 4 }, "delayed": { "afterDays": 90, "balance": 31050000, "mental": -4, "text": "3천만 원 + 이자 105만 원 상환 완료." }, "result": "잃어도 되는 만큼. 이 원칙이 나를 몇 번 살렸다." },
       { "text": "안 한다. 14%면 이유가 있다", "effect": { "mental": 2, "suspicion": -2 }, "result": "다섯 달 뒤 그 업체가 뉴스에 나왔다. 다른 상품이 터졌다고 했다." }
     ]
   },
