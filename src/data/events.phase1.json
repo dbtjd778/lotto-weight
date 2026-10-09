@@ -1,0 +1,105 @@
+[
+  {
+    "id": "p1_00_check",
+    "phase": 1,
+    "chapter": "1교시 · 주말의 숨바꼭질",
+    "speaker": "system",
+    "title": "토요일 21시 04분, 창원시 성산구",
+    "description": "편의점 봉투를 식탁에 던져놓고 습관처럼 QR을 찍었다. 화면이 멈췄다.\n\n[1등 당첨 / 당첨금 2,044,776,000원]\n\n손이 아니라 귀가 먼저 이상해진다. 냉장고 돌아가는 소리가 갑자기 너무 크다.",
+    "options": [
+      { "text": "다섯 번 더 찍어본다. 앱이 고장 났을 수도 있잖아", "effect": { "mental": 6 }, "result": "여섯 번 찍었다. 여섯 번 다 1등이었다. 이제 도망칠 곳이 없다.", "nextEventId": "p1_01_scream" },
+      { "text": "일단 커튼부터 친다", "effect": { "mental": 3, "suspicion": -3 }, "result": "3층 원룸 창문에 누가 있을 리 없다. 그래도 쳤다. 이게 정상이다.", "nextEventId": "p1_01_scream" }
+    ]
+  },
+  {
+    "id": "p1_01_scream",
+    "phase": 1,
+    "chapter": "1교시 · 주말의 숨바꼭질",
+    "speaker": "me",
+    "title": "소리를 지를 것인가",
+    "description": "20억. 세금 떼고 13억 7천. 가슴 안쪽에서 뭔가가 올라온다. 벽 너머는 옆집 신혼부부. 위층은 새벽에도 걷는 사람.\n\n지금 지르면 이 건물 사람들이 다 안다. 안 지르면 심장이 터질 것 같다.",
+    "options": [
+      { "text": "베개에 얼굴을 박고 지른다", "effect": { "mental": -8 }, "result": "베갯속으로 3초. 밖에서는 아무 소리도 안 났다. 완벽했다.", "nextEventId": "p1_02_storage" },
+      { "text": "샤워기를 틀어놓고 화장실에서 지른다", "effect": { "mental": -10, "balance": -3000 }, "result": "물값 3천 원으로 산 자유. 나쁘지 않은 거래였다.", "nextEventId": "p1_02_storage" },
+      { "text": "참는다. 아무 일도 없었던 것처럼 라면을 끓인다", "effect": { "mental": 12 }, "result": "면이 다 불도록 젓가락만 돌렸다. 참는 건 나중에 다 청구된다.", "nextEventId": "p1_02_storage" }
+    ]
+  },
+  {
+    "id": "p1_02_storage",
+    "phase": 1,
+    "chapter": "1교시 · 주말의 숨바꼭질",
+    "speaker": "system",
+    "title": "용지 보관법",
+    "description": "월요일 아침까지 이 종이 한 장을 지켜야 한다. 잃어버리면 13억 7천은 그냥 없던 일이 된다.\n\n이 집에서 가장 안전한 곳은 어디인가.",
+    "options": [
+      { "text": "지퍼백에 넣어 냉동실 만두 밑에", "effect": { "mental": -4, "suspicion": -2 }, "flags": ["ticket_freezer"], "result": "불이 나도 냉동실은 남는다더라. 근거는 없지만 마음은 편해졌다.", "nextEventId": "p1_03_sleep" },
+      { "text": "지갑 안. 몸에서 절대 안 뗀다", "effect": { "mental": 10 }, "flags": ["ticket_wallet"], "result": "지갑을 30분마다 열어보게 됐다. 이게 이틀이면 사람이 망가진다.", "nextEventId": "p1_03_sleep" },
+      { "text": "사진 찍어 클라우드에 올리고 원본은 책 사이에", "effect": { "mental": 2, "suspicion": 6 }, "flags": ["ticket_book", "cloud_photo"], "result": "클라우드는 가족 공유 앨범과 같은 계정이었다. 나중에 생각하기로 했다.", "nextEventId": "p1_03_sleep" },
+      { "text": "휴대폰 케이스 뒤에 끼운다", "effect": { "mental": 4, "suspicion": 1 }, "flags": ["ticket_phone"], "result": "폰을 떨어뜨릴 때마다 심장이 같이 떨어진다.", "nextEventId": "p1_03_sleep" }
+    ]
+  },
+  {
+    "id": "p1_03_sleep",
+    "phase": 1,
+    "chapter": "1교시 · 주말의 숨바꼭질",
+    "speaker": "system",
+    "title": "새벽 3시 47분",
+    "description": "누워는 있는데 자는 건 아니다. 천장 무늬가 오늘따라 선명하다.\n\n머릿속에서 이미 아파트를 세 채 샀고 두 채는 팔았다.",
+    "options": [
+      { "text": "유튜브로 '로또 1등 후기' 정주행", "effect": { "mental": 8, "suspicion": 0 }, "result": "다 망한 사람 얘기뿐이다. 알고리즘이 내 미래를 미리 보여주는 것 같아 더 못 잤다.", "nextEventId": "p1_04_family" },
+      { "text": "억지로 눈 감고 숫자를 센다", "effect": { "mental": -5 }, "result": "1370까지 세다가 잠들었다. 3시간은 잤다.", "nextEventId": "p1_04_family" },
+      { "text": "엑셀을 켜서 세금과 실수령액을 계산한다", "effect": { "mental": -2 }, "flags": ["knows_tax"], "result": "20억 4,477만에서 제세금 33%를 떼면 실수령 13억 7,000만 원. 숫자를 아니까 오히려 차분해졌다.", "nextEventId": "p1_04_family" }
+    ]
+  },
+  {
+    "id": "p1_04_family",
+    "phase": 1,
+    "chapter": "1교시 · 주말의 숨바꼭질",
+    "speaker": "mom",
+    "title": "일요일 아침, 엄마의 전화",
+    "description": "\"어, 아들. 자나? 목소리가 와 이라노.\"\n\n엄마는 20년째 내 목소리 반 톤 차이로 거짓말을 잡아낸다.",
+    "options": [
+      { "text": "\"어제 늦게 잤어\" — 사실만 말한다", "effect": { "mental": 2, "suspicion": 3 }, "result": "\"...뭐 좋은 일 있나?\" 엄마의 촉이 한 칸 올라갔다.", "nextEventId": "p1_05_sister" },
+      { "text": "일부러 짜증을 낸다. 평소처럼", "effect": { "mental": 6, "suspicion": -6 }, "result": "\"아이고 알겠다 알겠다.\" 완벽한 위장이었다. 끊고 나서 좀 미안했다.", "nextEventId": "p1_05_sister" },
+      { "text": "안 받는다", "effect": { "mental": 5, "suspicion": 8 }, "result": "20분 뒤 아빠한테서 전화가 왔다. 이 집은 무응답이 제일 큰 신호다.", "nextEventId": "p1_05_sister" }
+    ]
+  },
+  {
+    "id": "p1_05_sister",
+    "phase": 1,
+    "chapter": "1교시 · 주말의 숨바꼭질",
+    "speaker": "sis",
+    "title": "여동생의 카톡",
+    "description": "[오빠 나 이번 달 좀 마이너스인데 30만 원만...]\n\n평소 같으면 10만 원 보내고 잔소리 세 줄. 지금 계좌에는 13억 7천이 들어올 예정이다.\n\n손가락이 자꾸 0을 하나 더 누르려고 한다.",
+    "options": [
+      { "text": "평소대로 10만 원 + 잔소리 세 줄", "effect": { "balance": -100000, "mental": 3, "suspicion": -5 }, "result": "\"ㅇㅇ 짜다 진짜\" 완벽하다. 짠 오빠는 부자가 아니다.", "nextEventId": "p1_06_lock" },
+      { "text": "30만 원 다 보낸다", "effect": { "balance": -300000, "mental": -3, "suspicion": 6 }, "result": "\"?? 오빠 뭐 잘못 먹었나\" 관대함은 이 집에서 가장 큰 알람이다.", "nextEventId": "p1_06_lock" },
+      { "text": "100만 원 보낸다", "effect": { "balance": -1000000, "mental": -8, "suspicion": 18 }, "result": "동생은 5분 뒤 엄마한테 스크린샷을 보냈다. 가족 단톡이 조용해진 게 더 무섭다.", "nextEventId": "p1_06_lock" },
+      { "text": "\"나도 없다\" 읽씹", "effect": { "mental": 6, "suspicion": -2 }, "result": "죄책감 한 스푼. 의심도는 안 올랐다.", "nextEventId": "p1_06_lock" }
+    ]
+  },
+  {
+    "id": "p1_06_lock",
+    "phase": 1,
+    "chapter": "1교시 · 주말의 숨바꼭질",
+    "speaker": "system",
+    "title": "일요일 밤, 마지막 점검",
+    "description": "내일 아침 첫 KTX. 신분증, 통장, 도장, 그리고 그 종이.\n\n가방을 세 번 쌌다 풀었다.",
+    "options": [
+      { "text": "용지를 A4 서류봉투에 넣어 계약서 사이에 끼운다", "effect": { "mental": -6, "suspicion": -2 }, "flags": ["ticket_envelope"], "result": "'2024년 하반기 실적자료'라고 손으로 썼다. 세상에서 제일 아무도 안 열어볼 제목이다.", "nextEventId": "p1_07_end" },
+      { "text": "그냥 지갑째 안주머니. 몸이 제일 안전하다", "effect": { "mental": 5 }, "flags": ["ticket_wallet"], "result": "안주머니에 손을 넣은 채로 잤다.", "nextEventId": "p1_07_end" },
+      { "text": "코팅기를 사서 코팅한다", "effect": { "balance": -38000, "mental": 8, "suspicion": 2 }, "flags": ["ticket_laminated"], "result": "검색해보니 코팅하면 인식 오류가 날 수 있단다. 밤새 그 생각만 했다.", "nextEventId": "p1_07_end" }
+    ]
+  },
+  {
+    "id": "p1_07_end",
+    "phase": 1,
+    "chapter": "1교시 · 주말의 숨바꼭질",
+    "speaker": "system",
+    "title": "월요일 05시 12분",
+    "description": "알람보다 40분 먼저 눈이 떠졌다. 창밖은 아직 남색이다.\n\n창원중앙역까지 택시로 18분. 이제 회사에 뭐라고 할지만 정하면 된다.",
+    "options": [
+      { "text": "역으로 간다", "effect": { "mental": -2 }, "result": "택시 안에서 가방을 무릎 위에 올려놓고 두 팔로 감쌌다. 기사님이 백미러로 한 번 봤다.", "nextEventId": "p2_01_excuse" }
+    ]
+  }
+]

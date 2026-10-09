@@ -1,0 +1,17 @@
+{
+  "me":      { "name": "나",           "emoji": "🧑‍💻", "color": "#38bdf8", "role": "창원 사는 8년 차 직장인" },
+  "mom":     { "name": "엄마",         "emoji": "👩‍🦳", "color": "#f472b6", "role": "촉이 CCTV급" },
+  "dad":     { "name": "아빠",         "emoji": "👨‍🦳", "color": "#a3a3a3", "role": "말수 적음. 그래서 더 무섭다" },
+  "sis":     { "name": "여동생",       "emoji": "👩", "color": "#c084fc", "role": "인스타 팔로워 3천" },
+  "boss":    { "name": "김 팀장",      "emoji": "🧔", "color": "#fb923c", "role": "연차 결재의 최종 보스" },
+  "friend":  { "name": "동기 상현",    "emoji": "🧑", "color": "#4ade80", "role": "10년 지기. 그래서 위험" },
+  "uncle":   { "name": "작은아버지",   "emoji": "👴", "color": "#facc15", "role": "족보상 서열 3위" },
+  "pb":      { "name": "PB 이 차장",   "emoji": "💼", "color": "#22d3ee", "role": "NH 15층 프라이빗뱅커" },
+  "guard":   { "name": "청원경찰",     "emoji": "👮", "color": "#94a3b8", "role": "로비의 문지기" },
+  "agent":   { "name": "공인중개사",   "emoji": "🕴️", "color": "#e879f9", "role": "매물은 항상 오늘까지" },
+  "scam":    { "name": "모르는 번호",  "emoji": "📵", "color": "#ef4444", "role": "당신을 이미 알고 있다" },
+  "system":  { "name": "상황",         "emoji": "🎲", "color": "#64748b", "role": "" },
+  "clerk":   { "name": "창구 직원",    "emoji": "🧑‍💼", "color": "#60a5fa", "role": "NH 1층" },
+  "dealer":  { "name": "딜러",         "emoji": "🏎️", "color": "#f87171", "role": "출고는 빠를수록 좋다고 한다" },
+  "junior":  { "name": "후배 지훈",    "emoji": "🧑‍🎓", "color": "#2dd4bf", "role": "요즘 사업을 준비한다" }
+}

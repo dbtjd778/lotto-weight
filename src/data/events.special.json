@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sp_breakdown_01",
+    "phase": 4, "category": "붕괴", "speaker": "me", "weight": 1, "days": 4, "repeatable": true,
+    "title": "멘탈 붕괴 — 통제 불능",
+    "description": "손이 먼저 움직였다. 정신을 차렸을 땐 이미 결제가 끝나 있었다.\n\n스트레스가 한계를 넘으면 사람은 자기 손을 못 믿는다.",
+    "options": [
+      { "text": "결제 내역을 확인한다", "effect": { "balance": -42000000, "mental": -35, "suspicion": 10 }, "result": "4,200만 원. 시계 하나, 노트북 두 대, 그리고 기억 안 나는 것들. 절반은 반품도 안 된다." },
+      { "text": "폰을 꺼버리고 이틀을 잔다", "effect": { "balance": -8000000, "mental": -40 }, "result": "800만 원에서 멈췄다. 이틀 자고 일어나니 조금 살 것 같았다." }
+    ]
+  },
+  {
+    "id": "sp_breakdown_02",
+    "phase": 4, "category": "붕괴", "speaker": "scam", "weight": 1, "days": 4, "repeatable": true,
+    "title": "멘탈 붕괴 — 판단력 상실",
+    "description": "3주째 잠을 못 잤다. 그 상태에서 걸려온 전화를 받았다.\n\n말이 다 맞는 것 같았다. 지금 내 뇌는 아무거나 믿는다.",
+    "options": [
+      { "text": "일단 계약금만 보낸다", "effect": { "balance": -95000000, "mental": -30, "suspicion": 14 }, "result": "9,500만 원. 다음 날 그 번호는 없는 번호가 됐다." },
+      { "text": "끊는다. 마지막 힘으로", "effect": { "mental": -38, "suspicion": 4 }, "result": "끊고 나서 30분을 앉아 있었다. 하마터면." }
+    ]
+  },
+  {
+    "id": "sp_breakdown_03",
+    "phase": 4, "category": "붕괴", "speaker": "me", "weight": 1, "days": 5, "repeatable": true,
+    "title": "멘탈 붕괴 — 다 말해버릴 것 같다",
+    "description": "혼자 있는 게 더는 안 된다. 누구한테든 말해야 숨이 쉬어질 것 같다.\n\n카톡 목록을 위아래로 스크롤하고 있다.",
+    "options": [
+      { "text": "결국 아무한테나 말해버린다", "effect": { "mental": -45, "suspicion": 30 }, "flags": ["leaked"], "result": "말하고 나니 숨이 쉬어졌다. 그리고 다음 날부터 그 사람의 카톡이 늘었다." },
+      { "text": "상담센터 번호를 누른다", "effect": { "balance": -150000, "mental": -42 }, "flags": ["therapy"], "result": "모르는 사람한테 말했다. 아무 이해관계 없는 사람. 그게 정답이었다." }
+    ]
+  }
+]

@@ -1,0 +1,107 @@
+[
+  {
+    "id": "p2_01_excuse",
+    "phase": 2,
+    "chapter": "2교시 · 월요일 상경길",
+    "speaker": "boss",
+    "title": "김 팀장에게 뭐라고 할 것인가",
+    "description": "06시 40분. 팀장은 이미 카톡 1을 지웠다.\n\n오늘 하루가 필요하다. 딱 하루.",
+    "options": [
+      { "text": "\"장염이라 응급실 갑니다\"", "effect": { "mental": 4, "suspicion": 2 }, "flags": ["excuse_sick"], "result": "\"진단서 챙겨와라.\" ...진단서. 그 생각은 못 했다.", "nextEventId": "p2_02_ktx" },
+      { "text": "정직하게 연차 신청. 사유는 '개인사정'", "effect": { "mental": -3, "suspicion": 5 }, "flags": ["excuse_leave"], "result": "\"월요일에 개인사정? 뭔데.\" 김 팀장은 빈칸을 못 견디는 사람이다.", "nextEventId": "p2_02_ktx" },
+      { "text": "무단결근. 폰 비행기 모드", "effect": { "mental": 14, "suspicion": 12 }, "flags": ["excuse_awol"], "result": "9시 3분부터 부재중 11통. 12시엔 인사팀 이름이 떴다.", "nextEventId": "p2_02_ktx" },
+      { "text": "\"외할머니 제사입니다\"", "effect": { "mental": 7, "suspicion": -3 }, "flags": ["excuse_ancestor"], "result": "\"...그래 다녀와라.\" 통했다. 외할머니는 아직 정정하시다. 죄송합니다.", "nextEventId": "p2_02_ktx" }
+    ]
+  },
+  {
+    "id": "p2_02_ktx",
+    "phase": 2,
+    "chapter": "2교시 · 월요일 상경길",
+    "speaker": "system",
+    "title": "KTX 302 열차, 6호차 3D",
+    "description": "창원중앙 06:55 → 서울 09:47. 2시간 52분.\n\n옆자리 아저씨가 벌써 김밥을 꺼냈다. 나는 가방끈을 손목에 감았다.",
+    "options": [
+      { "text": "가방을 무릎에 올리고 두 손으로 안는다", "effect": { "mental": 6, "suspicion": 3 }, "result": "3시간 내내 그 자세였다. 옆자리 아저씨가 두 번 힐끔거렸다.", "nextEventId": "p2_03_toilet" },
+      { "text": "선반에 올린다. 자연스러운 게 최고다", "effect": { "mental": 10, "suspicion": -4 }, "result": "10분마다 고개를 들어 선반을 확인했다. 티는 안 났다. 목은 아팠다.", "nextEventId": "p2_03_toilet" },
+      { "text": "특실로 업그레이드한다", "effect": { "balance": -25000, "mental": -6, "suspicion": 2 }, "result": "옆자리가 비었다. 2만 5천 원에 산 평화. 오늘 제일 잘한 소비였다.", "nextEventId": "p2_03_toilet" }
+    ]
+  },
+  {
+    "id": "p2_03_toilet",
+    "phase": 2,
+    "chapter": "2교시 · 월요일 상경길",
+    "speaker": "system",
+    "title": "동대구를 지날 때, 방광이 신호를 보낸다",
+    "description": "아침에 긴장해서 아메리카노를 두 잔 마신 게 화근이다.\n\n화장실은 7호차 앞. 가방은 여기 있다.",
+    "options": [
+      { "text": "가방을 통째로 들고 화장실에 간다", "effect": { "mental": -4, "suspicion": 6 }, "result": "좁은 칸에서 가방을 무릎에 올린 채로. 인간의 존엄을 조금 내주고 13억을 지켰다.", "nextEventId": "p2_04_call" },
+      { "text": "용지만 속옷 안쪽에 넣고 간다", "effect": { "mental": 3, "suspicion": -3 }, "flags": ["ticket_underwear"], "result": "돌아와서 확인했다. 있다. 땀에 살짝 젖었지만 있다.", "nextEventId": "p2_04_call" },
+      { "text": "참는다. 서울까지 1시간 반 남았다", "effect": { "mental": 16 }, "result": "서울역에서 뛰었다. 인생에서 가장 절박했던 200미터.", "nextEventId": "p2_04_call" }
+    ]
+  },
+  {
+    "id": "p2_04_call",
+    "phase": 2,
+    "chapter": "2교시 · 월요일 상경길",
+    "speaker": "friend",
+    "title": "동기 상현의 전화",
+    "description": "\"야 너 오늘 왜 안 나왔어? 팀장 뒤집어졌는데.\"\n\n뒤에서 열차 안내방송이 나온다. — 이번 역은 대전, 대전역입니다.",
+    "options": [
+      { "text": "황급히 끊고 문자로 대답한다", "effect": { "mental": 5, "suspicion": 4 }, "result": "\"방금 뭐 방송 나오지 않았냐?\" 상현이 촉이 좋다는 걸 잊고 있었다.", "nextEventId": "p2_05_station" },
+      { "text": "\"병원 대기실\"이라고 우긴다", "effect": { "mental": 4, "suspicion": 7 }, "result": "\"병원에서 대전역 안내방송 나오냐?\" ...침묵.", "nextEventId": "p2_05_station" },
+      { "text": "\"본가 간다\"고 솔직히 말한다", "effect": { "mental": -4, "suspicion": 2 }, "result": "\"아 집안일? 그럼 그렇지.\" 반쯤 진실은 거짓말보다 튼튼하다.", "nextEventId": "p2_05_station" },
+      { "text": "안 받는다", "effect": { "mental": 3, "suspicion": 5 }, "result": "상현이가 팀 단톡에 '얘 뭔가 있음'이라고 썼다.", "nextEventId": "p2_05_station" }
+    ]
+  },
+  {
+    "id": "p2_05_station",
+    "phase": 2,
+    "chapter": "2교시 · 월요일 상경길",
+    "speaker": "system",
+    "title": "서울역 09:47, 그리고 서대문",
+    "description": "농협은행 본점은 서대문. 지하철 다섯 정거장, 택시로 15분.\n\n지금 내 손에는 13억 7천짜리 종이 한 장과 편의점 우산 하나가 있다.",
+    "options": [
+      { "text": "지하철. 사람 많은 데가 오히려 안전하다", "effect": { "balance": -1400, "mental": 5, "suspicion": -2 }, "result": "2호선 시청역에서 누가 가방을 스쳤다. 그 자리에 3초 얼어붙었다.", "nextEventId": "p2_06_guard" },
+      { "text": "택시. 오늘만큼은 돈 아끼지 말자", "effect": { "balance": -9800, "mental": -4 }, "result": "기사님이 \"은행 가시나 봐요?\"라고 물었다. \"...네.\" 그 뒤로 아무 말도 안 했다.", "nextEventId": "p2_06_guard" },
+      { "text": "걸어간다. 30분. 마음을 정리하고 싶다", "effect": { "mental": -8, "suspicion": -1 }, "result": "숭례문을 지나면서 처음으로 '이거 진짜구나' 싶었다. 좀 울 뻔했다.", "nextEventId": "p2_06_guard" }
+    ]
+  },
+  {
+    "id": "p2_06_guard",
+    "phase": 2,
+    "chapter": "2교시 · 월요일 상경길",
+    "speaker": "guard",
+    "title": "NH농협은행 본점 1층 로비",
+    "description": "청원경찰이 다가온다. 후드에 백팩, 눈이 빨간 30대 남자.\n\n\"어떤 업무로 오셨어요?\"",
+    "options": [
+      { "text": "\"1등이요.\" 조용히, 짧게", "effect": { "mental": -5, "suspicion": 3 }, "result": "그는 표정 하나 안 바꾸고 무전을 들었다. \"15층으로 모시겠습니다.\" 이 사람들 이거 매주 한다.", "nextEventId": "p2_07_lobby" },
+      { "text": "\"복권 당첨금 수령하러 왔습니다\" 또박또박", "effect": { "mental": 4, "suspicion": 8 }, "result": "로비에 있던 세 사람이 동시에 고개를 돌렸다. 목소리가 너무 컸다.", "nextEventId": "p2_07_lobby" },
+      { "text": "말없이 용지를 반쯤 꺼내 보여준다", "effect": { "mental": -3, "suspicion": -4 }, "result": "그는 고개를 한 번 끄덕이고 엘리베이터 쪽으로 손을 뻗었다. 프로다.", "nextEventId": "p2_07_lobby" },
+      { "text": "\"그냥 계좌 하나 만들려고요\" 둘러댄다", "effect": { "mental": 8, "suspicion": 2 }, "result": "1층 번호표를 뽑고 40분을 기다렸다가, 창구에서 다시 15층으로 안내받았다. 40분 낭비.", "nextEventId": "p2_07_lobby" }
+    ]
+  },
+  {
+    "id": "p2_07_lobby",
+    "phase": 2,
+    "chapter": "2교시 · 월요일 상경길",
+    "speaker": "clerk",
+    "title": "엘리베이터 앞, 신분 확인",
+    "description": "\"신분증이랑 통장, 도장 가져오셨죠?\"\n\n가방을 연다. 신분증. 통장. 도장. ...도장.",
+    "options": [
+      { "text": "도장을 안 가져왔다. 서명으로 되냐고 묻는다", "effect": { "mental": 12, "suspicion": 1 }, "result": "\"본인서명사실확인서 있으시면 돼요.\" 없다. 근처 동사무소를 뛰어갔다 왔다.", "nextEventId": "p2_08_up" },
+      { "text": "다 챙겨왔다. 세 번 확인했으니까", "effect": { "mental": -8 }, "requireFlag": "ticket_envelope", "result": "봉투에서 서류를 꺼내는 손이 안 떨렸다. 준비한 사람만 아는 여유.", "nextEventId": "p2_08_up" },
+      { "text": "가방을 뒤집어 다 쏟아본다", "effect": { "mental": 6, "suspicion": 4 }, "result": "로비 바닥에 립밤과 이어폰과 13억이 같이 굴러다녔다. 다행히 다 있었다.", "nextEventId": "p2_08_up" }
+    ]
+  },
+  {
+    "id": "p2_08_up",
+    "phase": 2,
+    "chapter": "2교시 · 월요일 상경길",
+    "speaker": "system",
+    "title": "엘리베이터, 15층",
+    "description": "문이 닫힌다. 층수가 올라간다. 3, 7, 11, 15.\n\n거울에 비친 얼굴이 낯설다. 후드 티에 백팩, 13억 원.",
+    "options": [
+      { "text": "심호흡을 세 번 한다", "effect": { "mental": -10 }, "result": "문이 열렸다. 카펫이 깔려 있고 소리가 없다. 다른 세계였다.", "nextEventId": "p3_01_room" }
+    ]
+  }
+]

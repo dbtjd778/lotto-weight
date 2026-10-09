@@ -1,0 +1,18 @@
+# 의존성 / 빌드 결과물 — 다른 PC에서는 npm install / npm run build 로 다시 만든다
+node_modules/
+dist/
+
+# 로그
+*.log
+npm-debug.log*
+
+# OS / 에디터
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# 환경변수
+.env
+.env.*

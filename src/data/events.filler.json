@@ -1,0 +1,208 @@
+[
+  {
+    "id": "f_01_delivery",
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 4, "days": 3, "repeatable": true,
+    "title": "배달앱 최소주문금액",
+    "description": "치킨 하나 시키려는데 최소주문 18,000원. 항상 여기서 사이드를 하나 더 넣었다.",
+    "options": [
+      { "text": "그냥 배달비까지 다 낸다", "effect": { "balance": -24000, "mental": -4 }, "result": "3,900원 배달비를 처음으로 안 따졌다. 이게 부자구나 싶었다." },
+      { "text": "포장 주문하고 걸어간다", "effect": { "balance": -16000, "mental": 2 }, "result": "왕복 20분. 3,900원을 아꼈다. 습관은 통장보다 느리게 바뀐다." }
+    ]
+  },
+  {
+    "id": "f_02_taxi",
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 4, "days": 3, "repeatable": true,
+    "title": "막차 vs 택시",
+    "description": "11시 42분. 막차까지 8분. 뛰면 탄다. 택시는 2만 3천 원.",
+    "options": [
+      { "text": "택시. 이제 안 뛴다", "effect": { "balance": -23000, "mental": -6 }, "result": "뒷좌석에 기대서 창밖을 봤다. 2만 3천 원에 산 저녁." },
+      { "text": "뛴다", "effect": { "mental": 4 }, "result": "탔다. 숨이 찼다. 앉을 자리는 없었다." }
+    ]
+  },
+  {
+    "id": "f_03_grocery",
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 4, "days": 3, "repeatable": true,
+    "title": "마트에서",
+    "description": "한우 채끝 100g에 12,800원. 옆에 수입 부챗살은 100g에 3,200원.",
+    "options": [
+      { "text": "한우를 산다", "effect": { "balance": -51000, "mental": -6 }, "result": "구우면서 계속 가격표 생각을 했다. 그래도 맛있었다." },
+      { "text": "수입산", "effect": { "balance": -13000, "mental": 1 }, "result": "충분히 맛있었다. 8년 동안 이걸 먹고 살았다." },
+      { "text": "둘 다 산다", "effect": { "balance": -64000, "mental": -8, "suspicion": 1 }, "result": "냉동실이 꽉 찼다. 부자의 냉동실은 이런 건가 싶었다." }
+    ]
+  },
+  {
+    "id": "f_04_phone",
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 3, "days": 4, "repeatable": true,
+    "title": "액정이 깨졌다",
+    "description": "3년 쓴 폰이다. 수리비 18만 원, 신제품 최고 사양은 210만 원.",
+    "options": [
+      { "text": "새 폰 최고 사양", "effect": { "balance": -2100000, "mental": -10, "suspicion": 6 }, "result": "1TB 모델. 사진이 200장밖에 없다." },
+      { "text": "수리한다", "effect": { "balance": -180000, "mental": -2 }, "result": "18만 원. 3년 더 쓸 수 있다고 한다." },
+      { "text": "깨진 채로 쓴다", "effect": { "mental": 5 }, "result": "손가락에 유리가 한 번 박혔다. 그래도 안 바꿨다." }
+    ]
+  },
+  {
+    "id": "f_05_coffee",
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 4, "days": 2, "repeatable": true,
+    "title": "아메리카노",
+    "description": "회사 앞 카페 4,800원. 편의점 1,500원. 사무실 믹스커피는 공짜.",
+    "options": [
+      { "text": "카페", "effect": { "balance": -4800, "mental": -3 }, "result": "따뜻한 컵을 들고 걷는 5분이 좋았다." },
+      { "text": "믹스", "effect": { "mental": 2 }, "result": "13억이 있는데 믹스를 탄다. 이게 위장이다." }
+    ]
+  },
+  {
+    "id": "f_06_lotto_again",
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 3, "days": 3, "repeatable": true,
+    "title": "또 로또를 산다",
+    "description": "편의점 앞에서 발이 멈췄다. 이미 됐는데. 이미 됐는데도 손이 간다.",
+    "options": [
+      { "text": "5천 원어치 산다", "effect": { "balance": -5000, "mental": -4 }, "result": "토요일 밤이 다시 기다려졌다. 이 기분이 그리웠던 거다." },
+      { "text": "10만 원어치 산다", "effect": { "balance": -100000, "mental": 6, "suspicion": 4 }, "result": "점원이 나를 한 번 봤다. 20장을 긁는 손이 예전 같지 않았다." },
+      { "text": "안 산다. 나는 이미 됐다", "effect": { "mental": 2 }, "result": "지나쳤다. 세 걸음 가서 뒤를 돌아봤다." }
+    ]
+  },
+  {
+    "id": "f_07_gas",
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 3, "days": 3, "repeatable": true,
+    "title": "주유소",
+    "description": "예전엔 3만 원어치만 넣었다. 리터당 20원 싼 곳을 찾아 3km를 돌아간 적도 있다.",
+    "options": [
+      { "text": "가득이요", "effect": { "balance": -92000, "mental": -5 }, "result": "가득이요, 라는 말을 처음 해봤다. 이상하게 목소리가 작았다." },
+      { "text": "3만 원어치", "effect": { "balance": -30000, "mental": 2 }, "result": "습관은 통장을 못 따라온다." }
+    ]
+  },
+  {
+    "id": "f_08_hair",
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 3, "days": 3, "repeatable": true,
+    "title": "미용실",
+    "description": "동네 만 원 컷 vs 청담동 디자이너 12만 원.",
+    "options": [
+      { "text": "청담동", "effect": { "balance": -120000, "mental": -8, "suspicion": 4 }, "result": "확실히 잘 잘랐다. 회사에서 머리 어디서 했냐는 말을 들었다." },
+      { "text": "만 원 컷", "effect": { "balance": -10000, "mental": 1 }, "result": "8년째 같은 아저씨. 8년째 같은 머리." }
+    ]
+  },
+  {
+    "id": "f_09_umbrella",
+    "phase": 4, "category": "일상", "speaker": "system", "weight": 3, "days": 2, "repeatable": true,
+    "title": "갑자기 비",
+    "description": "편의점 우산 5,000원. 뛰면 10분.",
+    "options": [
+      { "text": "산다", "effect": { "balance": -5000, "mental": -3 }, "result": "집에 우산이 일곱 개 있다. 여덟 개가 됐다." },
+      { "text": "뛴다", "effect": { "mental": 3 }, "result": "다 젖었다. 5천 원을 아꼈다." }
+    ]
+  },
+  {
+    "id": "f_10_saving",
+    "phase": 4, "category": "일상", "speaker": "system", "weight": 3, "days": 4, "repeatable": true,
+    "title": "적금 만기 알림",
+    "description": "3년 부은 적금이 만기됐다. 원금 1,080만 원, 이자 62만 원.\n\n예전엔 이 숫자가 인생의 전부였다.",
+    "options": [
+      { "text": "재예치한다", "effect": { "mental": -4 }, "result": "62만 원. 이 이자가 예전엔 얼마나 컸는지 기억하려고 애썼다." },
+      { "text": "찾아서 부모님께 드린다", "effect": { "balance": -11400000, "mental": -10, "suspicion": 4 }, "result": "적금 탔다고 했다. 사실이었다. 사실만 말하는 게 제일 안전하다." }
+    ]
+  },
+  {
+    "id": "f_11_gift_self",
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 3, "days": 3, "repeatable": true,
+    "title": "장바구니 정리",
+    "description": "2년 전부터 담아둔 것들. 다 합쳐서 34만 원.",
+    "options": [
+      { "text": "다 결제한다", "effect": { "balance": -340000, "mental": -12 }, "result": "2년치 미련이 34만 원이었다. 진작 살 걸." },
+      { "text": "다 지운다", "effect": { "mental": -3 }, "result": "지우고 나니 오히려 홀가분했다." }
+    ]
+  },
+  {
+    "id": "f_12_medical",
+    "phase": 4, "category": "일상", "speaker": "system", "weight": 3, "days": 3, "repeatable": true,
+    "title": "이가 시리다",
+    "description": "1년 전부터 미뤘다. 신경치료에 크라운까지 하면 90만 원이란다.",
+    "options": [
+      { "text": "치료받는다", "effect": { "balance": -900000, "mental": -12 }, "result": "1년 미룬 걸 하루에 끝냈다. 돈이 시간을 되돌려줄 때가 있다." },
+      { "text": "진통제로 버틴다", "effect": { "balance": -8000, "mental": 6 }, "result": "13억이 있는데 진통제를 먹고 있다." }
+    ]
+  },
+  {
+    "id": "f_13_parents_call",
+    "phase": 4, "category": "일상", "speaker": "mom", "weight": 4, "days": 3, "repeatable": true,
+    "title": "엄마의 안부 전화",
+    "description": "밥은 먹었나. 요새 회사는 우예 되노.\n\n평범한 질문인데 심장이 뛴다.",
+    "options": [
+      { "text": "평소처럼 짧게 대답한다", "effect": { "mental": 3, "suspicion": -4 }, "result": "3분 통화. 완벽했다." },
+      { "text": "오늘은 길게 얘기한다", "effect": { "mental": -8, "suspicion": 5 }, "result": "40분을 통화했다. 엄마가 니 무슨 일 있나 라고 물었다." },
+      { "text": "용돈 30만 원을 보낸다", "effect": { "balance": -300000, "mental": -6, "suspicion": 6 }, "result": "와 갑자기. 갑자기라는 말이 제일 위험한 단어다." }
+    ]
+  },
+  {
+    "id": "f_14_work_ot",
+    "phase": 4, "category": "일상", "speaker": "boss", "weight": 3, "days": 3, "repeatable": true,
+    "cond": { "forbidFlags": ["quit"] },
+    "title": "야근",
+    "description": "8시 반. 팀장이 커피를 사왔다. 오늘 좀만 더 하자.\n\n예전엔 야근수당 4만 8천 원이 아쉬웠다.",
+    "options": [
+      { "text": "남는다", "effect": { "balance": 48000, "mental": 8, "suspicion": -4 }, "result": "11시까지 했다. 야근수당 4만 8천 원이 들어왔다. 웃음이 나왔다." },
+      { "text": "먼저 간다고 한다", "effect": { "mental": -4, "suspicion": 8 }, "result": "쟤 요새 왜 저래? 소리를 등 뒤로 들었다." }
+    ]
+  },
+  {
+    "id": "f_15_subscription_audit",
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 3, "days": 3, "repeatable": true,
+    "title": "카드 명세서",
+    "description": "안 쓰는 구독이 아홉 개다. 합치면 월 8만 4천 원.\n\n예전엔 매달 이걸 정리했다.",
+    "options": [
+      { "text": "다 해지한다", "effect": { "mental": -6 }, "result": "1시간 걸렸다. 월 8만 4천 원. 13억이 있어도 이건 아깝다." },
+      { "text": "귀찮다. 그냥 둔다", "effect": { "balance": -1000000, "mental": 3 }, "result": "1년치 100만 원. 귀찮음의 가격이다." }
+    ]
+  },
+  {
+    "id": "f_16_night_walk",
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 3, "days": 3, "repeatable": true,
+    "title": "밤 산책",
+    "description": "잠이 안 온다. 창원천을 따라 걷는다.\n\n러닝하는 사람들, 강아지 산책시키는 사람들. 아무도 나를 모른다.",
+    "options": [
+      { "text": "한 시간 걷는다", "effect": { "mental": -10 }, "result": "걷다 보니 좀 나아졌다. 이게 공짜라는 게 제일 좋았다." },
+      { "text": "편의점 맥주를 사서 벤치에 앉는다", "effect": { "balance": -6000, "mental": -12 }, "result": "물 위로 다리 불빛이 흔들렸다. 처음으로 아무 걱정 없이 30분을 보냈다." }
+    ]
+  },
+  {
+    "id": "f_17_donate_small",
+    "phase": 4, "category": "일상", "speaker": "system", "weight": 2, "days": 3, "repeatable": true,
+    "title": "지하철역 모금함",
+    "description": "예전엔 그냥 지나쳤다. 지금은 지갑에 현금도 없다.",
+    "options": [
+      { "text": "계좌이체로 10만 원", "effect": { "balance": -100000, "mental": -8 }, "result": "아무도 모르는 10만 원. 이런 게 좋다." },
+      { "text": "그냥 지나간다", "effect": { "mental": 2 }, "result": "지나갔다. 두 걸음 뒤에 마음이 무거웠다." }
+    ]
+  },
+  {
+    "id": "f_18_old_friend_ok",
+    "phase": 4, "category": "일상", "speaker": "friend", "weight": 3, "days": 3, "repeatable": true,
+    "title": "그냥 술 한잔",
+    "description": "상현이가 연락했다. 돈 얘기 없이. 그냥 한잔 하자고.\n\n요즘 이런 연락이 제일 반갑다.",
+    "options": [
+      { "text": "나간다. 반반 계산", "effect": { "balance": -32000, "mental": -14, "suspicion": -2 }, "result": "3시간 동안 옛날 얘기만 했다. 오랜만에 웃었다." },
+      { "text": "나가서 내가 다 낸다", "effect": { "balance": -64000, "mental": -8, "suspicion": 8 }, "result": "야 왜 니가 내. 두 번째다. 상현이가 세는 것 같았다." },
+      { "text": "피곤하다고 미룬다", "effect": { "mental": 6, "suspicion": 2 }, "result": "미뤘다. 이렇게 사람이 줄어드는구나 싶었다." }
+    ]
+  },
+  {
+    "id": "f_19_insurance_call",
+    "phase": 4, "category": "일상", "speaker": "scam", "weight": 3, "days": 2, "repeatable": true,
+    "title": "또 모르는 번호",
+    "description": "하루에 세 통씩 온다. 대출, 보험, 투자.\n\n예전엔 하루에 한 통도 안 왔다.",
+    "options": [
+      { "text": "전부 차단하고 스팸 앱을 깐다", "effect": { "balance": -12000, "mental": -6, "suspicion": -4 }, "result": "하루 세 통이 한 통이 됐다. 1만 2천 원의 평화." },
+      { "text": "그냥 안 받는다", "effect": { "mental": 4 }, "result": "부재중이 쌓인다. 부재중 목록을 보는 것도 스트레스다." }
+    ]
+  },
+  {
+    "id": "f_20_mirror",
+    "phase": 4, "category": "일상", "speaker": "me", "weight": 2, "days": 3, "repeatable": true,
+    "title": "거울",
+    "description": "샤워하고 나와서 거울을 봤다. 살이 좀 빠졌다. 아니, 얼굴이 상했다.\n\n13억이 생기고 나서 6kg가 빠졌다.",
+    "options": [
+      { "text": "밥부터 제대로 챙겨 먹는다", "effect": { "balance": -60000, "mental": -10 }, "result": "반찬가게에서 일주일치를 샀다. 6만 원. 사람이 좀 돌아왔다." },
+      { "text": "괜찮다. 원래 마르는 게 나았어", "effect": { "mental": 6 }, "result": "괜찮지 않았다. 괜찮다고 하는 게 제일 안 괜찮은 거다." }
+    ]
+  }
+]
